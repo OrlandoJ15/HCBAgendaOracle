@@ -1,0 +1,13 @@
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\bin\Debug\net8.0\Entities.deps.json
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\bin\Debug\net8.0\Entities.dll
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\bin\Debug\net8.0\Entities.pdb
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\obj\Debug\net8.0\Entities.dll
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\obj\Debug\net8.0\refint\Entities.dll
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\obj\Debug\net8.0\Entities.pdb
+C:\HCB\BACK\HCBAgengaOracle\HCBAgendaOracle\Entities\obj\Debug\net8.0\ref\Entities.dll
