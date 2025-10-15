@@ -3,68 +3,16 @@
   "WorkspaceRootPath": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\businesslogic\\implementation\\citacanceladaln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\implementation\\citacanceladaln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6ECF3087-DE7F-437A-9AE5-55ADA2826020}|AgendaHCB\\AgendaHCB.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\agendahcb\\controllers\\citacanceladacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6ECF3087-DE7F-437A-9AE5-55ADA2826020}|AgendaHCB\\AgendaHCB.csproj|solutionrelative:agendahcb\\controllers\\citacanceladacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\businesslogic\\interfaces\\icitacanceladaln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\interfaces\\icitacanceladaln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\businesslogic\\interfaces\\icitaln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\interfaces\\icitaln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\businesslogic\\interfaces\\iagendahorariodetalleln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\interfaces\\iagendahorariodetalleln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\businesslogic\\implementation\\agendahorariodetalleln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\implementation\\agendahorariodetalleln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\businesslogic\\interfaces\\iagendahorarioln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\interfaces\\iagendahorarioln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\dataaccess\\implementation\\agendahorariodetallead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\implementation\\agendahorariodetallead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\businesslogic\\implementation\\agendahorarioln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FE7EABF-EE52-4825-A7F5-4D2697A9F4BB}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\implementation\\agendahorarioln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB8A8855-1CC5-4A75-804E-969197313397}|Entities\\Entities.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\entities\\models\\citacancelada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8A8855-1CC5-4A75-804E-969197313397}|Entities\\Entities.csproj|solutionrelative:entities\\models\\citacancelada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\dataaccess\\interfaces\\icitacanceladaad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\interfaces\\icitacanceladaad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\dataaccess\\interfaces\\iagendahorariodetallead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\interfaces\\iagendahorariodetallead.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\dataaccess\\interfaces\\icitaad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\interfaces\\icitaad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\dataaccess\\implementation\\agendaad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\implementation\\agendaad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB8A8855-1CC5-4A75-804E-969197313397}|Entities\\Entities.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\entities\\models\\agendahorariodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB8A8855-1CC5-4A75-804E-969197313397}|Entities\\Entities.csproj|solutionrelative:entities\\models\\agendahorariodetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6ECF3087-DE7F-437A-9AE5-55ADA2826020}|AgendaHCB\\AgendaHCB.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\agendahcb\\controllers\\citacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6ECF3087-DE7F-437A-9AE5-55ADA2826020}|AgendaHCB\\AgendaHCB.csproj|solutionrelative:agendahcb\\controllers\\citacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\dataaccess\\implementation\\agendahorarioad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\implementation\\agendahorarioad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6ECF3087-DE7F-437A-9AE5-55ADA2826020}|AgendaHCB\\AgendaHCB.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\agendahcb\\controllers\\agendahorariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6ECF3087-DE7F-437A-9AE5-55ADA2826020}|AgendaHCB\\AgendaHCB.csproj|solutionrelative:agendahcb\\controllers\\agendahorariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\dataaccess\\interfaces\\iagendahorarioad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\dataaccess\\implementation\\citaad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B2F47B1-46D6-494B-865D-4E1B0DA5D50F}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\implementation\\citaad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6ECF3087-DE7F-437A-9AE5-55ADA2826020}|AgendaHCB\\AgendaHCB.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\agendahcb\\controllers\\citacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6ECF3087-DE7F-437A-9AE5-55ADA2826020}|AgendaHCB\\AgendaHCB.csproj|solutionrelative:agendahcb\\controllers\\citacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB8A8855-1CC5-4A75-804E-969197313397}|Entities\\Entities.csproj|c:\\hcb\\back\\hcbagengaoracle\\hcbagendaoracle\\entities\\models\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -130,206 +74,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ICitaCanceladaLN.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Interfaces\\ICitaCanceladaLN.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Interfaces\\ICitaCanceladaLN.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Interfaces\\ICitaCanceladaLN.cs",
-              "RelativeToolTip": "BusinessLogic\\Interfaces\\ICitaCanceladaLN.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:47:44.517Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CitaCanceladaLN.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Implementation\\CitaCanceladaLN.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Implementation\\CitaCanceladaLN.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Implementation\\CitaCanceladaLN.cs",
-              "RelativeToolTip": "BusinessLogic\\Implementation\\CitaCanceladaLN.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "Title": "CitaCanceladaController.cs",
+              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\AgendaHCB\\Controllers\\CitaCanceladaController.cs",
+              "RelativeDocumentMoniker": "AgendaHCB\\Controllers\\CitaCanceladaController.cs",
+              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\AgendaHCB\\Controllers\\CitaCanceladaController.cs*",
+              "RelativeToolTip": "AgendaHCB\\Controllers\\CitaCanceladaController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:46:48.392Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IAgendaHorarioDetalleLN.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Interfaces\\IAgendaHorarioDetalleLN.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Interfaces\\IAgendaHorarioDetalleLN.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Interfaces\\IAgendaHorarioDetalleLN.cs",
-              "RelativeToolTip": "BusinessLogic\\Interfaces\\IAgendaHorarioDetalleLN.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:36:07.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AgendaHorarioDetalleLN.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Implementation\\AgendaHorarioDetalleLN.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Implementation\\AgendaHorarioDetalleLN.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Implementation\\AgendaHorarioDetalleLN.cs",
-              "RelativeToolTip": "BusinessLogic\\Implementation\\AgendaHorarioDetalleLN.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:33:34.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AgendaHorarioLN.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Implementation\\AgendaHorarioLN.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Implementation\\AgendaHorarioLN.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Implementation\\AgendaHorarioLN.cs",
-              "RelativeToolTip": "BusinessLogic\\Implementation\\AgendaHorarioLN.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAjwAkAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T21:59:21.838Z",
+              "WhenOpened": "2025-10-13T22:50:01.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ICitaLN.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Interfaces\\ICitaLN.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Interfaces\\ICitaLN.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Interfaces\\ICitaLN.cs",
-              "RelativeToolTip": "BusinessLogic\\Interfaces\\ICitaLN.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T21:24:07.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CitaCancelada.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\Entities\\Models\\CitaCancelada.cs",
-              "RelativeDocumentMoniker": "Entities\\Models\\CitaCancelada.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\Entities\\Models\\CitaCancelada.cs",
-              "RelativeToolTip": "Entities\\Models\\CitaCancelada.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:28:02.559Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IAgendaHorarioLN.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Interfaces\\IAgendaHorarioLN.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Interfaces\\IAgendaHorarioLN.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Interfaces\\IAgendaHorarioLN.cs",
-              "RelativeToolTip": "BusinessLogic\\Interfaces\\IAgendaHorarioLN.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:00:56.515Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ICitaCanceladaAD.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Interfaces\\ICitaCanceladaAD.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Interfaces\\ICitaCanceladaAD.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Interfaces\\ICitaCanceladaAD.cs",
-              "RelativeToolTip": "DataAccess\\Interfaces\\ICitaCanceladaAD.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:30:06.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AgendaHorarioDetalleAD.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Implementation\\AgendaHorarioDetalleAD.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Implementation\\AgendaHorarioDetalleAD.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Implementation\\AgendaHorarioDetalleAD.cs",
-              "RelativeToolTip": "DataAccess\\Implementation\\AgendaHorarioDetalleAD.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAADwv7AAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:13:31.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IAgendaHorarioDetalleAD.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Interfaces\\IAgendaHorarioDetalleAD.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Interfaces\\IAgendaHorarioDetalleAD.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Interfaces\\IAgendaHorarioDetalleAD.cs",
-              "RelativeToolTip": "DataAccess\\Interfaces\\IAgendaHorarioDetalleAD.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:10:06.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ICitaAD.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Interfaces\\ICitaAD.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Interfaces\\ICitaAD.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Interfaces\\ICitaAD.cs",
-              "RelativeToolTip": "DataAccess\\Interfaces\\ICitaAD.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T20:02:59.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AgendaHorarioDetalle.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\Entities\\Models\\AgendaHorarioDetalle.cs",
-              "RelativeDocumentMoniker": "Entities\\Models\\AgendaHorarioDetalle.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\Entities\\Models\\AgendaHorarioDetalle.cs",
-              "RelativeToolTip": "Entities\\Models\\AgendaHorarioDetalle.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:06:59.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AgendaHorarioController.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\AgendaHCB\\Controllers\\AgendaHorarioController.cs",
-              "RelativeDocumentMoniker": "AgendaHCB\\Controllers\\AgendaHorarioController.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\AgendaHCB\\Controllers\\AgendaHorarioController.cs",
-              "RelativeToolTip": "AgendaHCB\\Controllers\\AgendaHorarioController.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAiwAcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T22:02:23.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AgendaAD.cs",
-              "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Implementation\\AgendaAD.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Implementation\\AgendaAD.cs",
-              "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Implementation\\AgendaAD.cs",
-              "RelativeToolTip": "DataAccess\\Implementation\\AgendaAD.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAADwv7oAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T16:13:17.348Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "AgendaHorarioAD.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Implementation\\AgendaHorarioAD.cs",
               "RelativeDocumentMoniker": "DataAccess\\Implementation\\AgendaHorarioAD.cs",
@@ -337,12 +99,11 @@
               "RelativeToolTip": "DataAccess\\Implementation\\AgendaHorarioAD.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T21:45:26.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T21:45:26.271Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 3,
               "Title": "IAgendaHorarioAD.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Interfaces\\IAgendaHorarioAD.cs",
               "RelativeDocumentMoniker": "DataAccess\\Interfaces\\IAgendaHorarioAD.cs",
@@ -350,12 +111,11 @@
               "RelativeToolTip": "DataAccess\\Interfaces\\IAgendaHorarioAD.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T21:49:36.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T21:49:36.625Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 4,
               "Title": "AgendaController.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\AgendaHCB\\Controllers\\AgendaController.cs",
               "RelativeDocumentMoniker": "AgendaHCB\\Controllers\\AgendaController.cs",
@@ -363,12 +123,11 @@
               "RelativeToolTip": "AgendaHCB\\Controllers\\AgendaController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAjwBMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T20:00:07.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T20:00:07.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 1,
               "Title": "CitaController.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\AgendaHCB\\Controllers\\CitaController.cs",
               "RelativeDocumentMoniker": "AgendaHCB\\Controllers\\CitaController.cs",
@@ -376,12 +135,11 @@
               "RelativeToolTip": "AgendaHCB\\Controllers\\CitaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T21:29:14.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T21:29:14.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 7,
               "Title": "Cita.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\Entities\\Models\\Cita.cs",
               "RelativeDocumentMoniker": "Entities\\Models\\Cita.cs",
@@ -389,12 +147,11 @@
               "RelativeToolTip": "Entities\\Models\\Cita.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAwwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T20:03:57.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T20:03:57.995Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 6,
               "Title": "CitaAD.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\Implementation\\CitaAD.cs",
               "RelativeDocumentMoniker": "DataAccess\\Implementation\\CitaAD.cs",
@@ -402,12 +159,11 @@
               "RelativeToolTip": "DataAccess\\Implementation\\CitaAD.cs",
               "ViewState": "AgIAAOEAAAAAAAAAAADwv/IAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T20:03:51.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T20:03:51.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 5,
               "Title": "AgendaHorario.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\Entities\\Models\\AgendaHorario.cs",
               "RelativeDocumentMoniker": "Entities\\Models\\AgendaHorario.cs",
@@ -415,12 +171,11 @@
               "RelativeToolTip": "Entities\\Models\\AgendaHorario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T16:44:18.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T16:44:18.032Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 8,
               "Title": "CitaLN.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\Implementation\\CitaLN.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Implementation\\CitaLN.cs",
@@ -428,12 +183,11 @@
               "RelativeToolTip": "BusinessLogic\\Implementation\\CitaLN.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAA3wEcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T21:18:50.748Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T21:18:50.748Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 9,
               "Title": "OracleCommandAbirCerrar.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\OracleCommandAbirCerrar.cs",
               "RelativeDocumentMoniker": "DataAccess\\OracleCommandAbirCerrar.cs",
@@ -441,12 +195,11 @@
               "RelativeToolTip": "DataAccess\\OracleCommandAbirCerrar.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T19:21:03.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T19:21:03.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 13,
               "Title": "HCBContext.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\DBContext\\HCBContext.cs",
               "RelativeDocumentMoniker": "DataAccess\\DBContext\\HCBContext.cs",
@@ -454,12 +207,11 @@
               "RelativeToolTip": "DataAccess\\DBContext\\HCBContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T15:41:20.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T15:41:20.052Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\AgendaHCB\\Program.cs",
               "RelativeDocumentMoniker": "AgendaHCB\\Program.cs",
@@ -467,12 +219,11 @@
               "RelativeToolTip": "AgendaHCB\\Program.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T17:42:39.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T17:42:39.245Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\AgendaHCB\\appsettings.json",
               "RelativeDocumentMoniker": "AgendaHCB\\appsettings.json",
@@ -480,12 +231,11 @@
               "RelativeToolTip": "AgendaHCB\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-13T17:40:59.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T17:40:59.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 12,
               "Title": "OracleCommandAbirCerrar.cs",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\CommonMethods\\OracleCommandAbirCerrar.cs",
               "RelativeDocumentMoniker": "CommonMethods\\OracleCommandAbirCerrar.cs",
@@ -493,34 +243,31 @@
               "RelativeToolTip": "CommonMethods\\OracleCommandAbirCerrar.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T16:08:54.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T16:08:54.403Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "BusinessLogic",
+              "DocumentIndex": 15,
+              "Title": "BusinessLogic.csproj",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\BusinessLogic.csproj",
               "RelativeDocumentMoniker": "BusinessLogic\\BusinessLogic.csproj",
               "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\BusinessLogic\\BusinessLogic.csproj",
               "RelativeToolTip": "BusinessLogic\\BusinessLogic.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-13T14:46:56.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T14:46:56.345Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "DataAccess",
+              "DocumentIndex": 14,
+              "Title": "DataAccess.csproj",
               "DocumentMoniker": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\DataAccess.csproj",
               "RelativeDocumentMoniker": "DataAccess\\DataAccess.csproj",
               "ToolTip": "C:\\HCB\\BACK\\HCBAgengaOracle\\HCBAgendaOracle\\DataAccess\\DataAccess.csproj",
               "RelativeToolTip": "DataAccess\\DataAccess.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-13T14:36:25.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T14:36:25.587Z"
             }
           ]
         }
