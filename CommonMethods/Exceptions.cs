@@ -18,6 +18,37 @@ namespace CommonMethods
                             ". Método: " + methodName);
         }
 
+        // =======================================================
+        // MÉTODOS PRIVADOS DE EJECUCIÓN CENTRALIZADA
+        // =======================================================
+
+        public T EjecutarProcConEntidad<T>(Func<T> funcion)
+        {
+            try
+            {
+                return funcion();
+            }
+            catch (Exception ex)
+            {
+                LogError(ex);
+                throw;
+            }
+        }
+
+        public bool EjecutarProcSinEntidad(Action accion)
+        {
+            try
+            {
+                accion();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                LogError(ex);
+                throw;
+            }
+        }
+
 
     }
 }

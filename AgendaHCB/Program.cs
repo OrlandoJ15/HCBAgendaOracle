@@ -1,4 +1,7 @@
 using AgendaHCB.Services;
+using BussinessLogic.Implementation;
+using BussinessLogic.Interfaces;
+using CommonMethods;
 using DataAccess.Implementation;
 using DataAccess.Interfaces;
 
@@ -16,6 +19,10 @@ builder.Services.AddSingleton<OracleService>();
 
 // Inyección de AgendaAD con IConfiguration
 builder.Services.AddTransient<IAgendaAD, AgendaAD>();
+builder.Services.AddScoped<IAgendaAD, AgendaAD>();
+builder.Services.AddScoped<IAgendaLN, AgendaLN>();
+builder.Services.AddScoped<Exceptions>();
+
 
 var app = builder.Build();
 

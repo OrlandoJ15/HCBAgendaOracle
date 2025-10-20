@@ -7,7 +7,7 @@ using BussinessLogic.Interfaces;
 using System;
 using System.Collections.Generic;
 
-namespace LogicaNegocio.Implementation
+namespace BussinessLogic.Implementation
 {
     public class AgendaHorarioDetalleLN : IAgendaHorarioDetalleLN
     {
