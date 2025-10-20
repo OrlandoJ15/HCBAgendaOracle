@@ -12,11 +12,12 @@ namespace DataAccess.Implementation
     public class AgendaAD : IAgendaAD
     {
         private readonly string _connection;
-        public Exceptions gObjExceptions = new Exceptions();
+        public readonly Exceptions _exceptions;
 
-        public AgendaAD(IConfiguration configuration)
+        public AgendaAD(IConfiguration configuration,Exceptions exceptions)
         {
             _connection = configuration.GetConnectionString("OracleDb");
+            _exceptions = exceptions;
         }
 
         // =======================================================
@@ -66,7 +67,7 @@ namespace DataAccess.Implementation
             }
             catch (Exception ex)
             {
-                gObjExceptions.LogError(ex);
+                _exceptions.LogError(ex);
                 throw;
             }
 
@@ -114,7 +115,7 @@ namespace DataAccess.Implementation
             }
             catch (Exception ex)
             {
-                gObjExceptions.LogError(ex);
+                _exceptions.LogError(ex);
                 throw;
             }
 
@@ -176,7 +177,7 @@ namespace DataAccess.Implementation
             }
             catch (Exception ex)
             {
-                gObjExceptions.LogError(ex);
+                _exceptions.LogError(ex);
                 throw;
             }
 

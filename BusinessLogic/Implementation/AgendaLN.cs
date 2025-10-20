@@ -1,51 +1,22 @@
-﻿using DataAccess.Implementation;
+﻿using BussinessLogic.Interfaces;
+using CommonMethods;
+using DataAccess.Implementation;
 using DataAccess.Interfaces;
 using Entities.Models;
 using Microsoft.Extensions.Configuration;
-using CommonMethods;
-using BussinessLogic.Interfaces;
+using System;
 
-namespace LogicaNegocio.Implementation
+namespace BussinessLogic.Implementation
 {
     public class AgendaLN : IAgendaLN
     {
-        private readonly IAgendaAD gObjAgendaAD;
-        public Exceptions gObjExceptions = new Exceptions();
+        private readonly IAgendaAD _agendaAD;
+        public readonly Exceptions _exceptions;
 
-        public AgendaLN(IConfiguration configuration)
+        public AgendaLN(IAgendaAD agendaAD, Exceptions exceptions)
         {
-            gObjAgendaAD = new AgendaAD(configuration);
-        }
-
-        // =======================================================
-        // MÉTODOS PRIVADOS DE EJECUCIÓN CENTRALIZADA
-        // =======================================================
-
-        private T EjecutarProcConEntidad<T>(Func<T> funcion)
-        {
-            try
-            {
-                return funcion();
-            }
-            catch (Exception ex)
-            {
-                gObjExceptions.LogError(ex);
-                throw;
-            }
-        }
-
-        private bool EjecutarProcSinEntidad(Action accion)
-        {
-            try
-            {
-                accion();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                gObjExceptions.LogError(ex);
-                throw;
-            }
+            _agendaAD = agendaAD;
+            _exceptions = exceptions;
         }
 
         // =======================================================
@@ -54,27 +25,27 @@ namespace LogicaNegocio.Implementation
 
         public List<Agenda> RecAgenda()
         {
-            return EjecutarProcConEntidad(() => gObjAgendaAD.RecAgenda());
+            return _exceptions.EjecutarProcConEntidad(() => _agendaAD.RecAgenda());
         }
 
         public Agenda? RecAgendaXId(int numAgenda)
         {
-            return EjecutarProcConEntidad(() => gObjAgendaAD.RecAgendaXId(numAgenda));
+            return _exceptions.EjecutarProcConEntidad(() => _agendaAD.RecAgendaXId(numAgenda));
         }
 
         public bool InsAgenda(Agenda agenda)
         {
-            return EjecutarProcSinEntidad(() => gObjAgendaAD.InsAgenda(agenda));
+            return _exceptions.EjecutarProcSinEntidad(() => _agendaAD.InsAgenda(agenda));
         }
 
         public bool ModAgenda(Agenda agenda)
         {
-            return EjecutarProcSinEntidad(() => gObjAgendaAD.ModAgenda(agenda));
+            return _exceptions.EjecutarProcSinEntidad(() => _agendaAD.ModAgenda(agenda));
         }
 
         public bool DelAgenda(int numAgenda)
         {
-            return EjecutarProcSinEntidad(() => gObjAgendaAD.DelAgenda(numAgenda));
+            return _exceptions.EjecutarProcSinEntidad(() => _agendaAD.DelAgenda(numAgenda));
         }
     }
 }
