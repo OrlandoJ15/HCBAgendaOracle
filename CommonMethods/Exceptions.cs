@@ -18,6 +18,7 @@ namespace CommonMethods
                             ". Método: " + methodName);
         }
 
+
         // =======================================================
         // MÉTODOS PRIVADOS DE EJECUCIÓN CENTRALIZADA
         // =======================================================
