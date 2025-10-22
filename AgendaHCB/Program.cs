@@ -1,4 +1,6 @@
 using AgendaHCB.Services;
+using BusinessLogic.Implementation;
+using BusinessLogic.Interfaces;
 using BussinessLogic.Implementation;
 using BussinessLogic.Interfaces;
 using CommonMethods;
@@ -6,43 +8,40 @@ using DataAccess.Implementation;
 using DataAccess.Interfaces;
 using Microsoft.AspNetCore.Diagnostics;
 using NLog;
+using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// -------------------- CONFIGURACIÓN NLOG --------------------
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
+
+// -------------------- SERVICIOS --------------------
+
+// Controllers
 builder.Services.AddControllers();
 
-// Configuración de Swagger
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Servicios propios
 builder.Services.AddSingleton<OracleService>();
-
-// Inyección de AgendaAD con IConfiguration
-builder.Services.AddTransient<IAgendaAD, AgendaAD>();
-builder.Services.AddScoped<IAgendaAD, AgendaAD>();
-builder.Services.AddScoped<IAgendaLN, AgendaLN>();
-builder.Services.AddScoped<IEspecialidadesDA, EspecialidadesDA>();
+builder.Services.AddSingleton<AsyncExceptions>();
 builder.Services.AddScoped<Exceptions>();
 
+// DI para capa de datos y lógica
+builder.Services.AddScoped<IAgendaAD, AgendaAD>();
+builder.Services.AddScoped<IAgendaLN, AgendaLN>();
+builder.Services.AddScoped<ICitaDA, CitaDA>();
+builder.Services.AddScoped<ICitaBL, CitaBL>();
+builder.Services.AddScoped<IEspecialidadesDA, EspecialidadesDA>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// -------------------- MIDDLEWARE --------------------
 
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-//Manejo de errores
+// Manejo global de errores (antes de MapControllers)
 app.UseExceptionHandler(errorApp =>
 {
     errorApp.Run(async context =>
@@ -54,7 +53,7 @@ app.UseExceptionHandler(errorApp =>
         if (contextFeature != null)
         {
             var logger = LogManager.GetCurrentClassLogger();
-            logger.Error(contextFeature.Error);
+            logger.Error(contextFeature.Error, "Error no manejado en la aplicación");
 
             await context.Response.WriteAsJsonAsync(new
             {
@@ -64,5 +63,19 @@ app.UseExceptionHandler(errorApp =>
         }
     });
 });
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllers();
 
 app.Run();
