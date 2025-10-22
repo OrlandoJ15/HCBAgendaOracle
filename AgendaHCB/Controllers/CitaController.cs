@@ -1,127 +1,46 @@
-﻿using Entities.Models;
+﻿using BusinessLogic.Interfaces;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using BussinessLogic.Interfaces;
-using CommonMethods;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace AgenteWebApi.Controllers
+namespace AgendaHCB.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class CitaController : ControllerBase
     {
-        private readonly ICitaLN _citaLN;
-        private readonly Exceptions gObjExcepciones = new Exceptions();
+        private readonly ICitaBL _citaBL;
 
-        public CitaController(ICitaLN citaLN)
+        public CitaController(ICitaBL citaBL)
         {
-            _citaLN = citaLN;
+            _citaBL = citaBL;
         }
 
-        // =======================================================
-        // MÉTODOS PRIVADOS DE MANEJO DE ERRORES Y RESPUESTAS
-        // =======================================================
-
-        private ActionResult ManejoError(Exception ex)
-        {
-            gObjExcepciones.LogError(ex);
-            return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-        }
-
-        private IActionResult HandleResponse<T>(T response)
-        {
-            if (response == null)
-                return new JsonResult(null); // 404 Not Found
-
-            return Ok(response); // 200 OK
-        }
-
-        // =======================================================
-        // MÉTODOS DEL API
-        // =======================================================
-
-        [Route("[action]")]
-        [HttpGet]
-        public ActionResult<List<Cita>> RecCitas()
-        {
-            try
-            {
-                var lista = _citaLN.RecCitas();
-                return Ok(lista);
-            }
-            catch (Exception ex)
-            {
-                return ManejoError(ex);
-            }
-        }
-
-        [Route("[action]/{numCita}")]
-        [HttpGet]
-        public IActionResult RecCitaXId(int numCita)
-        {
-            try
-            {
-                var cita = _citaLN.RecCitaXId(numCita);
-                return HandleResponse(cita);
-            }
-            catch (Exception ex)
-            {
-                return ManejoError(ex);
-            }
-        }
-
-        [Route("[action]")]
+        // POST /api/cita
         [HttpPost]
-        public IActionResult InsCita([FromBody] Cita cita)
+        public async Task<ActionResult<OperationResult>> InsertarCita([FromBody] InsertarCitaRequest request)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Modelo inválido");
+            if (request == null || request.Cita == null)
+                return BadRequest(new OperationResult { Code = -1, Message = "Request inválido" });
 
-            try
-            {
-                _citaLN.InsCita(cita);
-                return CreatedAtAction(nameof(RecCitaXId), new { numCita = cita.NumCita }, cita);
-            }
-            catch (Exception ex)
-            {
-                return ManejoError(ex);
-            }
+            var result = await _citaBL.InsertarCitaAsync(request.Cita, request.Servicios ?? new List<CitaProcedimiento>(), request.BitacoraDatosDespues);
+
+            if (result == null)
+                return StatusCode(500, new OperationResult { Code = -1, Message = "Error inesperado" });
+
+            if (result.Code != 0)
+                return BadRequest(result);
+
+            return Ok(result);
         }
+    }
 
-        [Route("[action]")]
-        [HttpPut]
-        public IActionResult ModCita([FromBody] Cita cita)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest("Modelo inválido");
-
-            try
-            {
-                _citaLN.ModCita(cita);
-                return Ok(cita);
-            }
-            catch (Exception ex)
-            {
-                return ManejoError(ex);
-            }
-        }
-
-        [Route("[action]/{numCita}")]
-        [HttpDelete]
-        public IActionResult DelCita(int numCita)
-        {
-            try
-            {
-                var cita = _citaLN.RecCitaXId(numCita);
-                if (cita == null)
-                    return NotFound("Cita no encontrada");
-
-                _citaLN.DelCita(numCita);
-                return Ok(cita);
-            }
-            catch (Exception ex)
-            {
-                return ManejoError(ex);
-            }
-        }
+    // DTO para el body del POST
+    public class InsertarCitaRequest
+    {
+        public Cita Cita { get; set; }
+        public List<CitaProcedimiento> Servicios { get; set; }
+        public string BitacoraDatosDespues { get; set; }
     }
 }
