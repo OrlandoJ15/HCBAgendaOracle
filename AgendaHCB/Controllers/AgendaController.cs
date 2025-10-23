@@ -1,27 +1,26 @@
 ﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
 using BussinessLogic.Interfaces;
 using CommonMethods;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace AgenteWebApi.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class AgendaController : ControllerBase
+    public class ParamEnvioCorreoAdjuntoController : ControllerBase
     {
-        private readonly IAgendaLN _agendaLN;
+        private readonly IParamEnvioCorreoAdjuntoLN _paramAdjuntoLN;
         private readonly Exceptions gObjExcepciones = new Exceptions();
 
-        public AgendaController(IAgendaLN agendaLN)
+        public ParamEnvioCorreoAdjuntoController(IParamEnvioCorreoAdjuntoLN paramAdjuntoLN)
         {
-            _agendaLN = agendaLN;
+            _paramAdjuntoLN = paramAdjuntoLN;
         }
 
-        // Manejo centralizado de errores
+        // =======================================================
+        // Manejo centralizado de errores y respuestas
+        // =======================================================
         private ActionResult ManejoError(System.Exception ex)
         {
             gObjExcepciones.LogError(ex);
@@ -31,9 +30,9 @@ namespace AgenteWebApi.Controllers
         private IActionResult HandleResponse<T>(T response)
         {
             if (response == null)
-                return new JsonResult(null); // 404 Not Found
+                return NotFound("Registro no encontrado");
 
-            return Ok(response); // 200 OK
+            return Ok(response);
         }
 
         // =======================================================
@@ -42,11 +41,11 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpGet]
-        public ActionResult<List<Agenda>> RecAgenda()
+        public ActionResult<List<ParamEnvioCorreoAdjunto>> RecParamEnvioCorreoAdjuntos()
         {
             try
             {
-                var lista = _agendaLN.RecAgenda();
+                var lista = _paramAdjuntoLN.RecParamEnvioCorreoAdjuntos();
                 return Ok(lista);
             }
             catch (System.Exception ex)
@@ -55,14 +54,14 @@ namespace AgenteWebApi.Controllers
             }
         }
 
-        [Route("[action]")]
-        [HttpGet("{numAgenda}")]
-        public IActionResult RecAgendaXId(int numAgenda)
+        [Route("[action]/{nombre}")]
+        [HttpGet]
+        public IActionResult RecParamEnvioCorreoAdjuntoXNombre(string nombre)
         {
             try
             {
-                var agenda = _agendaLN.RecAgendaXId(numAgenda);
-                return HandleResponse(agenda);
+                var adjunto = _paramAdjuntoLN.RecParamEnvioCorreoAdjuntoXNombre(nombre);
+                return HandleResponse(adjunto);
             }
             catch (System.Exception ex)
             {
@@ -72,15 +71,16 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpPost]
-        public IActionResult InsAgenda([FromBody] Agenda agenda)
+        public IActionResult InsParamEnvioCorreoAdjunto([FromBody] ParamEnvioCorreoAdjunto adjunto)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo inválido");
 
             try
             {
-                _agendaLN.InsAgenda(agenda);
-                return CreatedAtAction(nameof(RecAgendaXId), new { numAgenda = agenda.NumAgenda }, agenda);
+                _paramAdjuntoLN.InsParamEnvioCorreoAdjunto(adjunto);
+                return CreatedAtAction(nameof(RecParamEnvioCorreoAdjuntoXNombre),
+                    new { nombre = adjunto.NOMBRE }, adjunto);
             }
             catch (System.Exception ex)
             {
@@ -90,15 +90,15 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpPut]
-        public IActionResult ModAgenda([FromBody] Agenda agenda)
+        public IActionResult ModParamEnvioCorreoAdjunto([FromBody] ParamEnvioCorreoAdjunto adjunto)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo inválido");
 
             try
             {
-                _agendaLN.ModAgenda(agenda);
-                return Ok(agenda);
+                _paramAdjuntoLN.ModParamEnvioCorreoAdjunto(adjunto);
+                return Ok(adjunto);
             }
             catch (System.Exception ex)
             {
@@ -106,23 +106,15 @@ namespace AgenteWebApi.Controllers
             }
         }
 
-        [Route("[action]/{numAgenda}")]
+        [Route("[action]/{nombre}")]
         [HttpDelete]
-        public IActionResult DelAgenda(int numAgenda)
+        public IActionResult DelParamEnvioCorreoAdjunto(string nombre)
         {
             try
             {
-                var agenda = _agendaLN.RecAgendaXId(numAgenda);
-                if (agenda == null)
-                    return NotFound("Agenda no encontrada");
+                var adjunto = _paramAdjuntoLN.RecParamEnvioCorreoAdjuntoXNombre(nombre);
+                if (adjunto == null)
+                    return NotFound("Adjunto no encontrado");
 
-                _agendaLN.DelAgenda(numAgenda);
-                return Ok(agenda);
-            }
-            catch (System.Exception ex)
-            {
-                return ManejoError(ex);
-            }
-        }
-    }
-}
+                _paramAdjuntoLN.DelParamEnvioCorreoAdjunto(nombre);
+                return Ok(adjunto);
