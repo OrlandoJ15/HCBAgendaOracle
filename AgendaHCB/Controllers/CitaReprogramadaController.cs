@@ -10,12 +10,12 @@ namespace AgenteWebApi.Controllers
     [ApiController]
     public class CitaReprogramadaController : ControllerBase
     {
-        private readonly ICitaReprogramadaLN _citaReprogramadaLN;
+        private readonly ICitaReprogramadaBL _citaReprogramadaBL;
         private readonly Exceptions gObjExcepciones = new Exceptions();
 
-        public CitaReprogramadaController(ICitaReprogramadaLN citaReprogramadaLN)
+        public CitaReprogramadaController(ICitaReprogramadaBL citaReprogramadaLN)
         {
-            _citaReprogramadaLN = citaReprogramadaLN;
+            _citaReprogramadaBL = citaReprogramadaLN;
         }
 
         private ActionResult ManejoError(Exception ex)
@@ -37,7 +37,7 @@ namespace AgenteWebApi.Controllers
         {
             try
             {
-                var lista = _citaReprogramadaLN.RecCitasReprogramadas();
+                var lista = _citaReprogramadaBL.RecCitasReprogramadas();
                 return Ok(lista);
             }
             catch (Exception ex)
@@ -52,7 +52,7 @@ namespace AgenteWebApi.Controllers
         {
             try
             {
-                var cita = _citaReprogramadaLN.RecCitaReprogramadaXId(numCitaReprogramada);
+                var cita = _citaReprogramadaBL.RecCitaReprogramadaXId(numCitaReprogramada);
                 return HandleResponse(cita);
             }
             catch (Exception ex)
@@ -70,7 +70,7 @@ namespace AgenteWebApi.Controllers
 
             try
             {
-                _citaReprogramadaLN.InsCitaReprogramada(cita);
+                _citaReprogramadaBL.InsCitaReprogramada(cita);
                 return CreatedAtAction(nameof(RecCitaReprogramadaXId),
                     new { numCitaReprogramada = cita.NumCitaReprogramada }, cita);
             }
@@ -89,7 +89,7 @@ namespace AgenteWebApi.Controllers
 
             try
             {
-                _citaReprogramadaLN.ModCitaReprogramada(cita);
+                _citaReprogramadaBL.ModCitaReprogramada(cita);
                 return Ok(cita);
             }
             catch (Exception ex)
@@ -104,11 +104,11 @@ namespace AgenteWebApi.Controllers
         {
             try
             {
-                var cita = _citaReprogramadaLN.RecCitaReprogramadaXId(numCitaReprogramada);
+                var cita = _citaReprogramadaBL.RecCitaReprogramadaXId(numCitaReprogramada);
                 if (cita == null)
                     return NotFound("Cita reprogramada no encontrada");
 
-                _citaReprogramadaLN.DelCitaReprogramada(numCitaReprogramada);
+                _citaReprogramadaBL.DelCitaReprogramada(numCitaReprogramada);
                 return Ok(cita);
             }
             catch (Exception ex)

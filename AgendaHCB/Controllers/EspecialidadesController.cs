@@ -18,7 +18,7 @@ namespace AgendaHCB.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<R_Especialidad>>> GetEspecialidades(
+        public async Task<ActionResult<List<Especialidad>>> GetEspecialidades(
             [FromQuery] int tipoAgenda,
             [FromQuery] int usuarioId,
             [FromQuery] int sucursal)

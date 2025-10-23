@@ -3,19 +3,20 @@ using CommonMethods;
 using DataAccess.Interfaces;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace AgenteWebApi.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class AgendaController : ControllerBase
+    public class ExpedienteController : ControllerBase
     {
-        private readonly IAgendaBL _agendaBL;
+        private readonly IExpedienteBL _expedienteBL;
         private readonly Exceptions gObjExcepciones = new Exceptions();
 
-        public AgendaController(IAgendaBL agendaLN)
+        public ExpedienteController(IExpedienteBL expedienteLN)
         {
-            _agendaBL = agendaLN;
+            _expedienteBL = expedienteLN;
         }
 
         private ActionResult ManejoError(System.Exception ex)
@@ -27,17 +28,17 @@ namespace AgenteWebApi.Controllers
         private IActionResult HandleResponse<T>(T response)
         {
             if (response == null)
-                return NotFound("Registro no encontrado.");
+                return NotFound("No se encontró el registro solicitado.");
             return Ok(response);
         }
 
         [Route("[action]")]
         [HttpGet]
-        public IActionResult RecAgenda()
+        public IActionResult RecExpediente()
         {
             try
             {
-                var lista = _agendaBL.RecAgenda();
+                var lista = _expedienteBL.RecExpediente();
                 return Ok(lista);
             }
             catch (System.Exception ex)
@@ -46,14 +47,14 @@ namespace AgenteWebApi.Controllers
             }
         }
 
-        [Route("[action]/{numAgenda}")]
+        [Route("[action]/{numExpediente}")]
         [HttpGet]
-        public IActionResult RecAgendaXId(int numAgenda)
+        public IActionResult RecExpedienteXId(int numExpediente)
         {
             try
             {
-                var agenda = _agendaBL.RecAgendaXId(numAgenda);
-                return HandleResponse(agenda);
+                var expediente = _expedienteBL.RecExpedienteXId(numExpediente);
+                return HandleResponse(expediente);
             }
             catch (System.Exception ex)
             {
@@ -63,15 +64,15 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpPost]
-        public IActionResult InsAgenda([FromBody] Agenda agenda)
+        public IActionResult InsExpediente([FromBody] Expediente expediente)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo inválido");
 
             try
             {
-                _agendaBL.InsAgenda(agenda);
-                return CreatedAtAction(nameof(RecAgendaXId), new { numAgenda = agenda.NumAgenda }, agenda);
+                _expedienteBL.InsExpediente(expediente);
+                return CreatedAtAction(nameof(RecExpedienteXId), new { numExpediente = expediente.NumExpediente }, expediente);
             }
             catch (System.Exception ex)
             {
@@ -81,15 +82,15 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpPut]
-        public IActionResult ModAgenda([FromBody] Agenda agenda)
+        public IActionResult ModExpediente([FromBody] Expediente expediente)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo inválido");
 
             try
             {
-                _agendaBL.ModAgenda(agenda);
-                return Ok(agenda);
+                _expedienteBL.ModExpediente(expediente);
+                return Ok(expediente);
             }
             catch (System.Exception ex)
             {
@@ -97,18 +98,18 @@ namespace AgenteWebApi.Controllers
             }
         }
 
-        [Route("[action]/{numAgenda}")]
+        [Route("[action]/{numExpediente}")]
         [HttpDelete]
-        public IActionResult DelAgenda(int numAgenda)
+        public IActionResult DelExpediente(int numExpediente)
         {
             try
             {
-                var agenda = _agendaBL.RecAgendaXId(numAgenda);
-                if (agenda == null)
-                    return NotFound("Registro no encontrado.");
+                var expediente = _expedienteBL.RecExpedienteXId(numExpediente);
+                if (expediente == null)
+                    return NotFound("Registro no encontrado");
 
-                _agendaBL.DelAgenda(numAgenda);
-                return Ok($"Agenda {numAgenda} eliminada correctamente.");
+                _expedienteBL.DelExpediente(numExpediente);
+                return Ok($"Expediente {numExpediente} eliminado correctamente.");
             }
             catch (System.Exception ex)
             {

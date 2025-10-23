@@ -31,8 +31,8 @@ builder.Services.AddSingleton<AsyncExceptions>();
 builder.Services.AddScoped<Exceptions>();
 
 // DI para capa de datos y lógica
-builder.Services.AddScoped<IAgendaAD, AgendaAD>();
-builder.Services.AddScoped<IAgendaLN, AgendaLN>();
+builder.Services.AddScoped<IAgendaDA, AgendaDA>();
+builder.Services.AddScoped<IAgendaBL, AgendaBL>();
 builder.Services.AddScoped<ICitaDA, CitaDA>();
 builder.Services.AddScoped<ICitaBL, CitaBL>();
 builder.Services.AddScoped<IEspecialidadesDA, EspecialidadesDA>();

@@ -10,10 +10,10 @@ namespace AgenteWebApi.Controllers
     [ApiController]
     public class CitaProcedimientoController : ControllerBase
     {
-        private readonly ICitaProcedimientoLN _citaProcedimientoLN;
+        private readonly ICitaProcedimientoBL _citaProcedimientoLN;
         private readonly Exceptions gObjExcepciones = new Exceptions();
 
-        public CitaProcedimientoController(ICitaProcedimientoLN citaProcedimientoLN)
+        public CitaProcedimientoController(ICitaProcedimientoBL citaProcedimientoLN)
         {
             _citaProcedimientoLN = citaProcedimientoLN;
         }

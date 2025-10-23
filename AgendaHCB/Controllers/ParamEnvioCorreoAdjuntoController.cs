@@ -1,120 +1,51 @@
-﻿using Entities.Models;
+﻿using BussinessLogic.Interfaces;
+using DataAccess.Interfaces;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using BussinessLogic.Interfaces;
-using CommonMethods;
-using System.Collections.Generic;
 
 namespace AgenteWebApi.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class CitaReprogramadaController : ControllerBase
+    public class ParamEnvioCorreoAdjuntoController : ControllerBase
     {
-        private readonly ICitaReprogramadaLN _citaReprogramadaLN;
-        private readonly Exceptions gObjExcepciones = new Exceptions();
+        private readonly IParamEnvioCorreoAdjuntoBL _adjuntoLN;
 
-        public CitaReprogramadaController(ICitaReprogramadaLN citaReprogramadaLN)
+        public ParamEnvioCorreoAdjuntoController(IParamEnvioCorreoAdjuntoBL adjuntoLN)
         {
-            _citaReprogramadaLN = citaReprogramadaLN;
+            _adjuntoLN = adjuntoLN;
         }
 
-        private ActionResult ManejoError(Exception ex)
-        {
-            gObjExcepciones.LogError(ex);
-            return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-        }
-
-        private IActionResult HandleResponse<T>(T response)
-        {
-            if (response == null)
-                return NotFound("Registro no encontrado");
-            return Ok(response);
-        }
-
-        [Route("[action]")]
         [HttpGet]
-        public ActionResult<List<CitaReprogramada>> RecCitasReprogramadas()
+        public IActionResult GetAll()
         {
-            try
-            {
-                var lista = _citaReprogramadaLN.RecCitasReprogramadas();
-                return Ok(lista);
-            }
-            catch (Exception ex)
-            {
-                return ManejoError(ex);
-            }
+            var lista = _adjuntoLN.ObtenerAdjuntos();
+            return Ok(lista);
         }
 
-        [Route("[action]/{numCitaReprogramada}")]
-        [HttpGet]
-        public IActionResult RecCitaReprogramadaXId(int numCitaReprogramada)
+        [HttpGet("{nombre}")]
+        public IActionResult GetByName(string nombre)
         {
-            try
-            {
-                var cita = _citaReprogramadaLN.RecCitaReprogramadaXId(numCitaReprogramada);
-                return HandleResponse(cita);
-            }
-            catch (Exception ex)
-            {
-                return ManejoError(ex);
-            }
+            var adjunto = _adjuntoLN.ObtenerAdjuntoPorNombre(nombre);
+            if (adjunto == null)
+                return NotFound($"No se encontró un adjunto con nombre {nombre}");
+            return Ok(adjunto);
         }
 
-        [Route("[action]")]
         [HttpPost]
-        public IActionResult InsCitaReprogramada([FromBody] CitaReprogramada cita)
+        public IActionResult Create([FromBody] ParamEnvioCorreoAdjunto adjunto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Modelo inválido");
-
-            try
-            {
-                _citaReprogramadaLN.InsCitaReprogramada(cita);
-                return CreatedAtAction(nameof(RecCitaReprogramadaXId),
-                    new { numCitaReprogramada = cita.NumCitaReprogramada }, cita);
-            }
-            catch (Exception ex)
-            {
-                return ManejoError(ex);
-            }
+            if (_adjuntoLN.InsertarAdjunto(adjunto))
+                return Ok("Adjunto insertado correctamente");
+            return BadRequest("Error al insertar el adjunto");
         }
 
-        [Route("[action]")]
-        [HttpPut]
-        public IActionResult ModCitaReprogramada([FromBody] CitaReprogramada cita)
+        [HttpDelete("{nombre}")]
+        public IActionResult Delete(string nombre)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Modelo inválido");
-
-            try
-            {
-                _citaReprogramadaLN.ModCitaReprogramada(cita);
-                return Ok(cita);
-            }
-            catch (Exception ex)
-            {
-                return ManejoError(ex);
-            }
-        }
-
-        [Route("[action]/{numCitaReprogramada}")]
-        [HttpDelete]
-        public IActionResult DelCitaReprogramada(int numCitaReprogramada)
-        {
-            try
-            {
-                var cita = _citaReprogramadaLN.RecCitaReprogramadaXId(numCitaReprogramada);
-                if (cita == null)
-                    return NotFound("Cita reprogramada no encontrada");
-
-                _citaReprogramadaLN.DelCitaReprogramada(numCitaReprogramada);
-                return Ok(cita);
-            }
-            catch (Exception ex)
-            {
-                return ManejoError(ex);
-            }
+            if (_adjuntoLN.EliminarAdjunto(nombre))
+                return Ok("Adjunto eliminado correctamente");
+            return BadRequest("Error al eliminar el adjunto");
         }
     }
 }

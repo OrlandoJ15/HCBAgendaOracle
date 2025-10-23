@@ -10,10 +10,10 @@ namespace AgenteWebApi.Controllers
     [ApiController]
     public class ParamEnvioCorreoController : ControllerBase
     {
-        private readonly IParamEnvioCorreoLN _paramEnvioCorreoLN;
+        private readonly IParamEnvioCorreoBL _paramEnvioCorreoLN;
         private readonly Exceptions gObjExcepciones = new Exceptions();
 
-        public ParamEnvioCorreoController(IParamEnvioCorreoLN paramEnvioCorreoLN)
+        public ParamEnvioCorreoController(IParamEnvioCorreoBL paramEnvioCorreoLN)
         {
             _paramEnvioCorreoLN = paramEnvioCorreoLN;
         }
