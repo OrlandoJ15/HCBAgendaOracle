@@ -1,4 +1,4 @@
-﻿using BussinessLogic.Interfaces;
+﻿using BusinessLogic.Interfaces;
 using CommonMethods;
 using DataAccess.Implementation;
 using DataAccess.Interfaces;
@@ -6,7 +6,7 @@ using Entities.Models;
 using Microsoft.Extensions.Configuration;
 using System;
 
-namespace BussinessLogic.Implementation
+namespace BusinessLogic.Implementation
 {
     public class AgendaLN : IAgendaLN
     {

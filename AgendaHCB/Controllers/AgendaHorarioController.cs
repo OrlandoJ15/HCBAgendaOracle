@@ -1,4 +1,4 @@
-﻿using Entities.Models;
+﻿/*using Entities.Models;
 using CommonMethods;
 using Oracle.ManagedDataAccess.Client;
 using System.Data;
@@ -181,3 +181,4 @@ namespace DataAccess.Implementation
         }
     }
 }
+*/

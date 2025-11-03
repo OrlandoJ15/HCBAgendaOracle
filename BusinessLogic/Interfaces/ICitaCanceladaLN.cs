@@ -1,7 +1,7 @@
 ﻿using Entities.Models;
 using System.Collections.Generic;
 
-namespace BussinessLogic.Interfaces
+namespace BusinessLogic.Interfaces
 {
     public interface ICitaCanceladaLN
     {
