@@ -1,6 +1,6 @@
-﻿/*using Entities.Models;
+﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using BusinessLogic.Interfaces;
+using BussinessLogic.Interfaces;
 using CommonMethods;
 using System.Collections.Generic;
 
@@ -8,19 +8,15 @@ namespace AgenteWebApi.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class CitaCanceladaController : ControllerBase
+    public class CitaReprogramadaController : ControllerBase
     {
-        private readonly ICitaCanceladaBL _citaCanceladaLN;
+        private readonly ICitaReprogramadaBL _citaReprogramadaBL;
         private readonly Exceptions gObjExcepciones = new Exceptions();
 
-        public CitaCanceladaController(ICitaCanceladaBL citaCanceladaLN)
+        public CitaReprogramadaController(ICitaReprogramadaBL citaReprogramadaLN)
         {
-            _citaCanceladaLN = citaCanceladaLN;
+            _citaReprogramadaBL = citaReprogramadaLN;
         }
-
-        // =======================================================
-        // MÉTODOS PRIVADOS DE MANEJO DE ERRORES Y RESPUESTAS
-        // =======================================================
 
         private ActionResult ManejoError(Exception ex)
         {
@@ -31,22 +27,17 @@ namespace AgenteWebApi.Controllers
         private IActionResult HandleResponse<T>(T response)
         {
             if (response == null)
-                return new JsonResult(null); // 404 Not Found
-
-            return Ok(response); // 200 OK
+                return NotFound("Registro no encontrado");
+            return Ok(response);
         }
-
-        // =======================================================
-        // MÉTODOS DEL API
-        // =======================================================
 
         [Route("[action]")]
         [HttpGet]
-        public ActionResult<List<CitaCancelada>> RecCitasCanceladas()
+        public ActionResult<List<CitaReprogramada>> RecCitasReprogramadas()
         {
             try
             {
-                var lista = _citaCanceladaLN.RecCitasCanceladas();
+                var lista = _citaReprogramadaBL.RecCitasReprogramadas();
                 return Ok(lista);
             }
             catch (Exception ex)
@@ -55,13 +46,13 @@ namespace AgenteWebApi.Controllers
             }
         }
 
-        [Route("[action]/{numCitaCancelada}")]
+        [Route("[action]/{numCitaReprogramada}")]
         [HttpGet]
-        public IActionResult RecCitaCanceladaXId(int numCitaCancelada)
+        public IActionResult RecCitaReprogramadaXId(int numCitaReprogramada)
         {
             try
             {
-                var cita = _citaCanceladaLN.RecCitaCanceladaXId(numCitaCancelada);
+                var cita = _citaReprogramadaBL.RecCitaReprogramadaXId(numCitaReprogramada);
                 return HandleResponse(cita);
             }
             catch (Exception ex)
@@ -72,15 +63,16 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpPost]
-        public IActionResult InsCitaCancelada([FromBody] CitaCancelada cita)
+        public IActionResult InsCitaReprogramada([FromBody] CitaReprogramada cita)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo inválido");
 
             try
             {
-                _citaCanceladaLN.InsCitaCancelada(cita);
-                return CreatedAtAction(nameof(RecCitaCanceladaXId), new { numCitaCancelada = cita.NumCitaCancelada }, cita);
+                _citaReprogramadaBL.InsCitaReprogramada(cita);
+                return CreatedAtAction(nameof(RecCitaReprogramadaXId),
+                    new { numCitaReprogramada = cita.NumCitaReprogramada }, cita);
             }
             catch (Exception ex)
             {
@@ -90,14 +82,14 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpPut]
-        public IActionResult ModCitaCancelada([FromBody] CitaCancelada cita)
+        public IActionResult ModCitaReprogramada([FromBody] CitaReprogramada cita)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo inválido");
 
             try
             {
-                _citaCanceladaLN.ModCitaCancelada(cita);
+                _citaReprogramadaBL.ModCitaReprogramada(cita);
                 return Ok(cita);
             }
             catch (Exception ex)
@@ -106,17 +98,17 @@ namespace AgenteWebApi.Controllers
             }
         }
 
-        [Route("[action]/{numCitaCancelada}")]
+        [Route("[action]/{numCitaReprogramada}")]
         [HttpDelete]
-        public IActionResult DelCitaCancelada(int numCitaCancelada)
+        public IActionResult DelCitaReprogramada(int numCitaReprogramada)
         {
             try
             {
-                var cita = _citaCanceladaLN.RecCitaCanceladaXId(numCitaCancelada);
+                var cita = _citaReprogramadaBL.RecCitaReprogramadaXId(numCitaReprogramada);
                 if (cita == null)
-                    return NotFound("Cita cancelada no encontrada");
+                    return NotFound("Cita reprogramada no encontrada");
 
-                _citaCanceladaLN.DelCitaCancelada(numCitaCancelada);
+                _citaReprogramadaBL.DelCitaReprogramada(numCitaReprogramada);
                 return Ok(cita);
             }
             catch (Exception ex)
@@ -126,4 +118,3 @@ namespace AgenteWebApi.Controllers
         }
     }
 }
-*/

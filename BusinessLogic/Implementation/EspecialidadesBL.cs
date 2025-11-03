@@ -18,7 +18,7 @@ namespace BusinessLogic.Implementation
             _exceptions = exceptions;
         }
 
-        public async Task<List<R_Especialidad>> RecEspecialidadesxUsuarioAsync(int tipoAgenda, int usuarioId, int sucursal)
+        public async Task<List<Especialidad>> RecEspecialidadesxUsuarioAsync(int tipoAgenda, int usuarioId, int sucursal)
         {
             return await _exceptions.EjecutarProcConEntidadAsync(
                 async () => await _especialidadesDA.RecEspecialidadesxUsuarioAsync(tipoAgenda, usuarioId, sucursal)

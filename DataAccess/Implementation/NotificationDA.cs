@@ -18,9 +18,9 @@ namespace DataAccess.Implementation
             _connection = configuration.GetConnectionString("OracleDb");
         }
 
-        public async Task<Machote_Mensaje> ObtenerMachoteAsync(int numMachote, string codigoIdioma)
+        public async Task<MachoteMensaje> ObtenerMachoteAsync(int numMachote, string codigoIdioma)
         {
-            var machote = new Machote_Mensaje();
+            var machote = new MachoteMensaje();
 
             await using var conn = new OracleConnection(_connection);
             await conn.OpenAsync();
@@ -97,9 +97,9 @@ namespace DataAccess.Implementation
             return lista;
         }
 
-        public async Task<Articulo_Detalle> ObtenerArticuloDetalleAsync(string codArticulo)
+        public async Task<ArticuloDetalle> ObtenerArticuloDetalleAsync(string codArticulo)
         {
-            var detalle = new Articulo_Detalle();
+            var detalle = new ArticuloDetalle();
 
             await using var conn = new OracleConnection(_connection);
             await conn.OpenAsync();

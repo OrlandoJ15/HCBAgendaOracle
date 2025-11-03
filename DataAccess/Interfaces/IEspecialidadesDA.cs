@@ -6,6 +6,6 @@ namespace DataAccess.Interfaces
 {
     public interface IEspecialidadesDA
     {
-        Task<List<R_Especialidad>> RecEspecialidadesxUsuarioAsync(int tipoAgenda, int usuarioId, int sucursal);
+        Task<List<Especialidad>> RecEspecialidadesxUsuarioAsync(int tipoAgenda, int usuarioId, int sucursal);
     }
 }

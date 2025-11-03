@@ -15,9 +15,9 @@ namespace DataAccess.Implementation
             _connection = configuration.GetConnectionString("OracleDb");
         }
 
-        public async Task<List<R_Especialidad>> RecEspecialidadesxUsuarioAsync(int tipoAgenda, int usuarioId, int sucursal)
+        public async Task<List<Especialidad>> RecEspecialidadesxUsuarioAsync(int tipoAgenda, int usuarioId, int sucursal)
         {
-            var list = new List<R_Especialidad>();
+            var list = new List<Especialidad>();
 
             await using var connection = new OracleConnection(_connection);
             await using var cmd = new OracleCommand("especialidades_consul_usuario", connection)
@@ -35,7 +35,7 @@ namespace DataAccess.Implementation
             await using var reader = await cmd.ExecuteReaderAsync();
             while (await reader.ReadAsync())
             {
-                list.Add(new R_Especialidad
+                list.Add(new Especialidad
                 {
                     COD_ESPEC = reader["cod_espec"]?.ToString(),
                     DESC_ESPEC = reader["desc_espec"]?.ToString()
