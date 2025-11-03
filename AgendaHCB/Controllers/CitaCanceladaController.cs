@@ -1,6 +1,6 @@
-﻿using Entities.Models;
+﻿/*using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using BussinessLogic.Interfaces;
+using BusinessLogic.Interfaces;
 using CommonMethods;
 using System.Collections.Generic;
 
@@ -126,3 +126,4 @@ namespace AgenteWebApi.Controllers
         }
     }
 }
+*/

@@ -3,7 +3,7 @@ using DataAccess.Interfaces;
 using Entities.Models;
 using Microsoft.Extensions.Configuration;
 using CommonMethods;
-using BussinessLogic.Interfaces;
+using BusinessLogic.Interfaces;
 
 namespace BusinessLogic.Implementation
 {

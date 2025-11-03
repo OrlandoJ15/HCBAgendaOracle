@@ -12,7 +12,7 @@
         public string CodTipDoc { get; set; }                   // COD_TIPDOC
         public string NumId { get; set; }                       // NUM_ID
         public string CodClase { get; set; }                    // COD_CLASE
-        public DateTime FecNacimiento { get; set; }             // FEC_NACIMIENTO
+        public DateTime? FecNacimiento { get; set; }             // FEC_NACIMIENTO
         public int? TelHab { get; set; }                        // TEL_HAB
         public int? TelOfic { get; set; }                       // TEL_OFIC
         public int? TelOpc { get; set; }                        // TEL_OPC
@@ -22,7 +22,7 @@
         public string CodCanton { get; set; }                   // COD_CANTON
         public string CodDistrito { get; set; }                 // COD_DISTRITO
         public string CodBarrio { get; set; }                   // COD_BARRIO
-        public DateTime FecExpediente { get; set; }             // FEC_EXPEDIENTE
+        public DateTime? FecExpediente { get; set; }             // FEC_EXPEDIENTE
         public string EstadoExp { get; set; }                   // ESTADO_EXP
         public string Medico { get; set; }                      // MEDICO
         public string CodMedico { get; set; }                   // COD_MEDICO
@@ -49,7 +49,7 @@
         public string CodProfesion { get; set; }                // COD_PROFESION
         public string IndConsEnvioInfo { get; set; }            // IND_CONS_ENVIOINFO
         public string CodPaisNac { get; set; }                  // COD_PAIS_NAC
-        public string CodCategoriaAcSocial { get; set; }        // COD_CATEGORIA_ACSOCIAL
+        public string CodCategoriaACSocial { get; set; }        // COD_CATEGORIA_ACSOCIAL
         public int? TelCelular { get; set; }                    // TEL_CELULAR
         public string IndOrigen { get; set; } = "SIGH";         // IND_ORIGEN
         public bool IndVivePais { get; set; }                   // IND_VIVEPAIS (NUMBER(1))
@@ -58,7 +58,7 @@
         public string CodEstadoPaisVive { get; set; }           // COD_ESTADO_PAISVIVE
         public bool IndPacienteConvenio { get; set; } = false;  // IND_PACIENTE_CONVENIO (INTEGER)
         public string CodConvenio { get; set; }                 // COD_CONVENIO
-        public string CorreoElectronicoFe { get; set; }         // CORREO_ELECTRONICO_FE
+        public string CorreoElectronicoFE { get; set; }         // CORREO_ELECTRONICO_FE
         public string IndExpedienteTemp { get; set; }           // IND_EXPEDIENTE_TEMP
         public string IndExtranjero { get; set; } = "N";        // IND_EXTRANJERO
         public string CodHotel { get; set; }                    // COD_HOTEL

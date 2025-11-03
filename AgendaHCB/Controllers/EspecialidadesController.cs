@@ -1,4 +1,4 @@
-﻿using BusinessLogic.Interfaces;
+﻿/*using BusinessLogic.Interfaces;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -32,3 +32,4 @@ namespace AgendaHCB.Controllers
         }
     }
 }
+*/

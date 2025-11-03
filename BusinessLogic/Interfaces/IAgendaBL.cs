@@ -1,6 +1,6 @@
 ﻿using Entities.Models;
 
-namespace BussinessLogic.Interfaces
+namespace BusinessLogic.Interfaces
 {
     public interface IAgendaBL
     {

@@ -1,8 +1,6 @@
 using AgendaHCB.Services;
 using BusinessLogic.Implementation;
 using BusinessLogic.Interfaces;
-using BussinessLogic.Implementation;
-using BussinessLogic.Interfaces;
 using CommonMethods;
 using DataAccess.Implementation;
 using DataAccess.Interfaces;
@@ -31,11 +29,18 @@ builder.Services.AddSingleton<AsyncExceptions>();
 builder.Services.AddScoped<Exceptions>();
 
 // DI para capa de datos y lógica
-builder.Services.AddScoped<IAgendaDA, AgendaDA>();
-builder.Services.AddScoped<IAgendaBL, AgendaBL>();
+builder.Services.AddScoped<IPacienteBL, PacienteBL>();
+builder.Services.AddScoped<IPacienteDA, PacienteDA>();
+
+/*
+builder.Services.AddScoped<IAgendaAD, AgendaAD>();
+builder.Services.AddScoped<IAgendaLN, AgendaLN>();
 builder.Services.AddScoped<ICitaDA, CitaDA>();
 builder.Services.AddScoped<ICitaBL, CitaBL>();
 builder.Services.AddScoped<IEspecialidadesDA, EspecialidadesDA>();
+builder.Services.AddScoped<IEspecialidadesBL, EspecialidadesBL>();
+builder.Services.AddScoped<ICitaCanceladaAD, CitaCanceladaAD>();
+builder.Services.AddScoped<ICitaCanceladaLN, CitaCanceladaLN>();*/
 
 var app = builder.Build();
 
