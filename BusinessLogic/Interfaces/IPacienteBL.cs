@@ -10,5 +10,7 @@ namespace BusinessLogic.Interfaces
     public interface IPacienteBL
     {
         List<Expediente> GetRecordByName(string primerNom, string segundoNom, string primerAp, string segundoAp);
+
+        List<Expediente> GetRecordByIdentification(string pidentificacion, string pcod_tipdoc);
     }
 }

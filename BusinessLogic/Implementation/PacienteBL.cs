@@ -28,5 +28,10 @@ namespace BusinessLogic.Implementation
         public List<Expediente> GetRecordByName(string primerNom, string segundoNom, string primerAp, string segundoAp) {
             return _exceptions.EjecutarProcConEntidad(() => _pacienteAD.GetRecordByName(primerNom, segundoNom, primerAp, segundoAp));
         }
+
+        public List<Expediente> GetRecordByIdentification(string pidentificacion, string pcod_tipdoc)
+        {
+            return _exceptions.EjecutarProcConEntidad(() => _pacienteAD.GetRecordByIdentification(pidentificacion, pcod_tipdoc));
+        }
     }
 }
