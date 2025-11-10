@@ -1,6 +1,6 @@
-﻿/*using Entities.Models;
+﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using BusinessLogic.Interfaces;
+using BussinessLogic.Interfaces;
 using CommonMethods;
 using System.Collections.Generic;
 
@@ -8,14 +8,14 @@ namespace AgenteWebApi.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class CitaCanceladaController : ControllerBase
+    public class ParamEnvioCorreoController : ControllerBase
     {
-        private readonly ICitaCanceladaBL _citaCanceladaLN;
+        private readonly IParamEnvioCorreoBL _paramEnvioCorreoLN;
         private readonly Exceptions gObjExcepciones = new Exceptions();
 
-        public CitaCanceladaController(ICitaCanceladaBL citaCanceladaLN)
+        public ParamEnvioCorreoController(IParamEnvioCorreoBL paramEnvioCorreoLN)
         {
-            _citaCanceladaLN = citaCanceladaLN;
+            _paramEnvioCorreoLN = paramEnvioCorreoLN;
         }
 
         // =======================================================
@@ -42,11 +42,11 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpGet]
-        public ActionResult<List<CitaCancelada>> RecCitasCanceladas()
+        public ActionResult<List<ParamEnvioCorreo>> RecParamsEnvioCorreo()
         {
             try
             {
-                var lista = _citaCanceladaLN.RecCitasCanceladas();
+                var lista = _paramEnvioCorreoLN.RecParamsEnvioCorreo();
                 return Ok(lista);
             }
             catch (Exception ex)
@@ -55,14 +55,14 @@ namespace AgenteWebApi.Controllers
             }
         }
 
-        [Route("[action]/{numCitaCancelada}")]
+        [Route("[action]/{compania}")]
         [HttpGet]
-        public IActionResult RecCitaCanceladaXId(int numCitaCancelada)
+        public IActionResult RecParamEnvioCorreoXId(string compania)
         {
             try
             {
-                var cita = _citaCanceladaLN.RecCitaCanceladaXId(numCitaCancelada);
-                return HandleResponse(cita);
+                var param = _paramEnvioCorreoLN.RecParamEnvioCorreoXId(compania);
+                return HandleResponse(param);
             }
             catch (Exception ex)
             {
@@ -72,15 +72,15 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpPost]
-        public IActionResult InsCitaCancelada([FromBody] CitaCancelada cita)
+        public IActionResult InsParamEnvioCorreo([FromBody] ParamEnvioCorreo param)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo inválido");
 
             try
             {
-                _citaCanceladaLN.InsCitaCancelada(cita);
-                return CreatedAtAction(nameof(RecCitaCanceladaXId), new { numCitaCancelada = cita.NumCitaCancelada }, cita);
+                _paramEnvioCorreoLN.InsParamEnvioCorreo(param);
+                return CreatedAtAction(nameof(RecParamEnvioCorreoXId), new { compania = param.COMPAÑIA }, param);
             }
             catch (Exception ex)
             {
@@ -90,15 +90,15 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpPut]
-        public IActionResult ModCitaCancelada([FromBody] CitaCancelada cita)
+        public IActionResult ModParamEnvioCorreo([FromBody] ParamEnvioCorreo param)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo inválido");
 
             try
             {
-                _citaCanceladaLN.ModCitaCancelada(cita);
-                return Ok(cita);
+                _paramEnvioCorreoLN.ModParamEnvioCorreo(param);
+                return Ok(param);
             }
             catch (Exception ex)
             {
@@ -106,18 +106,18 @@ namespace AgenteWebApi.Controllers
             }
         }
 
-        [Route("[action]/{numCitaCancelada}")]
+        [Route("[action]/{compania}")]
         [HttpDelete]
-        public IActionResult DelCitaCancelada(int numCitaCancelada)
+        public IActionResult DelParamEnvioCorreo(string compania)
         {
             try
             {
-                var cita = _citaCanceladaLN.RecCitaCanceladaXId(numCitaCancelada);
-                if (cita == null)
-                    return NotFound("Cita cancelada no encontrada");
+                var param = _paramEnvioCorreoLN.RecParamEnvioCorreoXId(compania);
+                if (param == null)
+                    return NotFound("Parámetro de envío de correo no encontrado");
 
-                _citaCanceladaLN.DelCitaCancelada(numCitaCancelada);
-                return Ok(cita);
+                _paramEnvioCorreoLN.DelParamEnvioCorreo(compania);
+                return Ok(param);
             }
             catch (Exception ex)
             {
@@ -126,4 +126,3 @@ namespace AgenteWebApi.Controllers
         }
     }
 }
-*/

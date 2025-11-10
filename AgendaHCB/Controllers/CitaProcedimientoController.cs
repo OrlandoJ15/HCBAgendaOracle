@@ -1,6 +1,6 @@
-﻿/*using Entities.Models;
+﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
-using BusinessLogic.Interfaces;
+using BussinessLogic.Interfaces;
 using CommonMethods;
 using System.Collections.Generic;
 
@@ -8,14 +8,14 @@ namespace AgenteWebApi.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class CitaCanceladaController : ControllerBase
+    public class CitaProcedimientoController : ControllerBase
     {
-        private readonly ICitaCanceladaBL _citaCanceladaLN;
+        private readonly ICitaProcedimientoBL _citaProcedimientoLN;
         private readonly Exceptions gObjExcepciones = new Exceptions();
 
-        public CitaCanceladaController(ICitaCanceladaBL citaCanceladaLN)
+        public CitaProcedimientoController(ICitaProcedimientoBL citaProcedimientoLN)
         {
-            _citaCanceladaLN = citaCanceladaLN;
+            _citaProcedimientoLN = citaProcedimientoLN;
         }
 
         // =======================================================
@@ -31,9 +31,9 @@ namespace AgenteWebApi.Controllers
         private IActionResult HandleResponse<T>(T response)
         {
             if (response == null)
-                return new JsonResult(null); // 404 Not Found
+                return NotFound("Registro no encontrado");
 
-            return Ok(response); // 200 OK
+            return Ok(response);
         }
 
         // =======================================================
@@ -42,11 +42,11 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpGet]
-        public ActionResult<List<CitaCancelada>> RecCitasCanceladas()
+        public ActionResult<List<CitaProcedimiento>> RecCitaProcedimientos()
         {
             try
             {
-                var lista = _citaCanceladaLN.RecCitasCanceladas();
+                var lista = _citaProcedimientoLN.RecCitaProcedimientos();
                 return Ok(lista);
             }
             catch (Exception ex)
@@ -55,14 +55,14 @@ namespace AgenteWebApi.Controllers
             }
         }
 
-        [Route("[action]/{numCitaCancelada}")]
+        [Route("[action]/{numCita}/{codArticulo}")]
         [HttpGet]
-        public IActionResult RecCitaCanceladaXId(int numCitaCancelada)
+        public IActionResult RecCitaProcedimientoXId(int numCita, string codArticulo)
         {
             try
             {
-                var cita = _citaCanceladaLN.RecCitaCanceladaXId(numCitaCancelada);
-                return HandleResponse(cita);
+                var citaProc = _citaProcedimientoLN.RecCitaProcedimientoXId(numCita, codArticulo);
+                return HandleResponse(citaProc);
             }
             catch (Exception ex)
             {
@@ -72,15 +72,16 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpPost]
-        public IActionResult InsCitaCancelada([FromBody] CitaCancelada cita)
+        public IActionResult InsCitaProcedimiento([FromBody] CitaProcedimiento citaProc)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo inválido");
 
             try
             {
-                _citaCanceladaLN.InsCitaCancelada(cita);
-                return CreatedAtAction(nameof(RecCitaCanceladaXId), new { numCitaCancelada = cita.NumCitaCancelada }, cita);
+                _citaProcedimientoLN.InsCitaProcedimiento(citaProc);
+                return CreatedAtAction(nameof(RecCitaProcedimientoXId),
+                    new { numCita = citaProc.NUM_CITA, codArticulo = citaProc.COD_ARTICULO }, citaProc);
             }
             catch (Exception ex)
             {
@@ -90,15 +91,15 @@ namespace AgenteWebApi.Controllers
 
         [Route("[action]")]
         [HttpPut]
-        public IActionResult ModCitaCancelada([FromBody] CitaCancelada cita)
+        public IActionResult ModCitaProcedimiento([FromBody] CitaProcedimiento citaProc)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo inválido");
 
             try
             {
-                _citaCanceladaLN.ModCitaCancelada(cita);
-                return Ok(cita);
+                _citaProcedimientoLN.ModCitaProcedimiento(citaProc);
+                return Ok(citaProc);
             }
             catch (Exception ex)
             {
@@ -106,18 +107,18 @@ namespace AgenteWebApi.Controllers
             }
         }
 
-        [Route("[action]/{numCitaCancelada}")]
+        [Route("[action]/{numCita}/{codArticulo}")]
         [HttpDelete]
-        public IActionResult DelCitaCancelada(int numCitaCancelada)
+        public IActionResult DelCitaProcedimiento(int numCita, string codArticulo)
         {
             try
             {
-                var cita = _citaCanceladaLN.RecCitaCanceladaXId(numCitaCancelada);
-                if (cita == null)
-                    return NotFound("Cita cancelada no encontrada");
+                var citaProc = _citaProcedimientoLN.RecCitaProcedimientoXId(numCita, codArticulo);
+                if (citaProc == null)
+                    return NotFound("Cita procedimiento no encontrada");
 
-                _citaCanceladaLN.DelCitaCancelada(numCitaCancelada);
-                return Ok(cita);
+                _citaProcedimientoLN.DelCitaProcedimiento(numCita, codArticulo);
+                return Ok(citaProc);
             }
             catch (Exception ex)
             {
@@ -126,4 +127,3 @@ namespace AgenteWebApi.Controllers
         }
     }
 }
-*/
